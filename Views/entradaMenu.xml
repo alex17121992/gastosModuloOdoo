@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <odoo>
+        <data>
+            <!-- Action to open To-do Task list -->
+            <act_window
+                id="action_todo_task"
+                name="Gastos e Ingresos"
+                res_model="gastos.devengos"
+                view_mode="tree,form"
+            />
+            <!-- Menu item to open To-do Task list -->
+            <menuitem
+                id="menu_todo_task"
+                name="Gastos e Ingresos"
+                sequence="20"
+                action="action_todo_task"
+            />
+            <menuitem name="Inicio" id="menu_inicio" parent="menu_todo_task" sequence="10"/>
+            <menuitem name="Gastos" id="menu_gasto" action="gastos_int" parent="menu_inicio" sequence="10"/>
+            <menuitem name="Ingresos" id="menu_ing" action="gastos_ingresos" parent="menu_inicio" sequence="10"/>
+            <menuitem name="Departamentos" id="menu_depart" action="gastos_depart" parent="menu_inicio" sequence="10"/>
+            <menuitem name="Empleados" id="menu_emp" action="gastos_emp" parent="menu_inicio" sequence="10"/>
+            <menuitem name="Graficos" id="menu_marks" action="gastos_graficos" parent="menu_inicio" sequence="10"/>
+        </data>
+    </odoo>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="gastos_emp" name="empleado"
+                     res_model="gastos.empleado" />
+
+
+        <record id="gastos_emp_view_form" model="ir.ui.view">
+            <field name="name">Lista Empleados</field>
+            <field name="model">gastos.empleado</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="foto" widget="image" class="oe_avatar oe_right"/>
+                    <group>
+                        <field name="dni"/>
+                        <field name="nombre"></field>
+                        <field name="apellidos"></field>
+                        <field name="departamento"></field>
+                        <field name="fechaNac"></field>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="gastos_int_view_form" model="ir.ui.view">
+            <field name="name">Lista Empleados</field>
+            <field name="model">gastos.empleado</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="dni"></field>
+                    <field name="nombre"></field>
+                    <field name="apellidos"></field>
+                    <field name="departamento"></field>
+                    <field name="fechaNac"></field>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

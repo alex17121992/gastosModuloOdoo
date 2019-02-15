@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+         <act_window id="gastos_graficos" name="gastos_graf"
+                     res_model="gastos.devengos"
+                     view_type="form"
+                     view_mode="tree,form,graph,pivot"/>
+        <record model ="ir.ui.view" id="marks_graph_view">
+            <field name="name">Marks</field>
+            <field name="model">gastos.devengos</field>
+            <field name="arch" type="xml">
+                <graph string="Marks">
+                    <field name="fecha" type="row"></field>
+                    <field name="precio" type="col"></field>
+                </graph>
+            </field>
+        </record>
+    </data>
+</odoo>
